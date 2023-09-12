@@ -7,7 +7,7 @@ let product = [
         "inStock": true
     }, 
     {
-        "name": "Nike Zoom Mercurial Superfly 9 Academy KM MG",
+        "name": "Nike Zoom Mercurial Superfly 9 Academy KM",
         "price": "1.099",
         "description": "Fodboldstøvler til flere typer underlag",
         "image": "img/sko2.png",
