@@ -62,3 +62,15 @@ for (let i = 0; i < product.length; i++) {
     </div>
     `
 }
+
+let productsContainer = document.getElementById("products");
+let scrollAmount = 455; // 455 står for 455 pixels, som svarer til bredden på 1 product + mellemrummet
+
+function goRight() {
+    productsContainer.scrollLeft += scrollAmount;
+}
+
+function goLeft() {
+    productsContainer.scrollLeft -= scrollAmount;
+}
+

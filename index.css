@@ -34,6 +34,8 @@ body {
 #products {
     display: flex;
     overflow-y: auto;
+    scroll-behavior: smooth;
+    transition: transform 0.3s ease-in-out;
 }
 
 /*HEADER START*/
@@ -161,18 +163,6 @@ a {
 /*NAVIGATION END*/
 
 
-.dropdown {
-    display: flex;
-	justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    background-color: #ffffff;
-    list-style: none;
-}
-
-.dropdown-title {
-    
-}
 
 .studierabat {
     text-align: center;
@@ -194,30 +184,6 @@ a {
 #opdag {
     text-decoration: underline;
 }
-
-.dropdown2-1, .dropdown2-2, .dropdown2-3, .dropdown2-4, .dropdown2-5{
-    display: none;
-}
-
-.dropdown2-1 a, .dropdown2-2 a, .dropdown2-3 a, .dropdown2-4 a, .dropdown2-5 a{
-    color:#949494;
-}
-
-/*.dropdown:hover .dropdown2-1 {display: block;}*/
-
-
-.dropdown-content {
-    display: none;
-}
-
-.dropdown-content a{
-    color:#949494;
-}
-
-
-
-/*DROPDOWN START*/
-/*DROPDOWN END*/
 
 #video {
     width: 100%;
@@ -271,4 +237,34 @@ h1 {
 
 #shoe-section {
     margin-left: 50px;
+    margin-top: 50px;
+}
+
+#button-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#button-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+    right: 0;
+}
+
+.arrow {
+    margin: 0px 10px;
+    background-color: #f1f1f1;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: #949494;
+    cursor: pointer;
 }

@@ -61,16 +61,20 @@
             </section>
 
             <section>
-                <video controls autoplay loop muted id="video">
+                <video autoplay loop muted id="video">
                     <source src="img/nikevideo.mp4" type="video/mp4">
                 </video>
             </section>
             
             <section id="shoe-section">
-                <h2>Populært i denne uge</h2>
-                <div id="products">
-                    
+                <div id="button-nav">
+                    <h2>Populært i denne uge</h2>
+                    <div id="button-controls">
+                        <div class="arrow" onclick="goLeft()">&lt</div>
+                        <div class="arrow" onclick="goRight()">&gt</div>
+                    </div>
                 </div>
+                    <div id="products"></div>
             </section>
         </main>
     </body>
