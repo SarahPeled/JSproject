@@ -362,7 +362,7 @@ h1 {
 
 #all-shoes {
     margin-right: 30px;
-    margin-left: 170px;
+    margin-left: 70px;
 
 }
 
@@ -382,4 +382,123 @@ h1 {
 
 .overlay:hover {
     opacity: 1;
+}
+
+#big-shoe {
+    height: 630px;
+    width: auto;
+    border-radius: 8px;
+}
+
+#big-shoe-container {
+    margin-right: 80px;
+}
+
+#shoe-details-page {
+    display: flex;
+    justify-content: center;
+}
+
+.shoe-info {
+    margin-left: 50px;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.product-price {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+#shoe-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 385px;
+}
+
+.size-guide {
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-left: 4px;
+    margin-bottom: 8px;
+}
+
+.size-guide .guide{
+    color: #949494;
+}
+
+.shoe-size {
+    padding: 10px 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 25px;
+    margin: 3px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.availability  {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.availability img {
+    width: 60px;
+}
+
+.btn {
+    font-size: 18px;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.add {
+    background-color: black;
+    color: white;
+    padding: 22px 110px;
+}
+
+.fav {
+    border: 1px solid rgb(182, 182, 182);
+    padding: 18px 110px;
+}
+
+#bottom-detail {
+    color: #949494;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#thumb {
+    width: 100%;
+    height: auto;
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
+
+#thumb-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#thumb-text {
+    font-size: 21px;
+    text-align: center;
+    line-height: 150%;
 }

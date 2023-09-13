@@ -49,24 +49,25 @@ let product = [
     }
 ]
 
-// 15 shoesizes with 0.5 intervals
-let shoeSizes = [36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40 ,40.5, 41, 41.5, 42, 42.5, 43];
 
 // get element products and create a div with each product
 let products = document.getElementById("products");
 
-// use for loop to loop through the array and document.write each product
-for (let i = 0; i < product.length; i++) {
-    products.innerHTML += `
-    <a href=${product[i].link} class="product">
+if (products !== null) {
+    
+    // use for loop to loop through the array and document.write each product
+    for (let i = 0; i < product.length; i++) {
+        products.innerHTML += `
+        <a href=${product[i].link} class="product">
         <img src="${product[i].image}">
         <div class="info">
-            <p class="name">${product[i].name}</p>
-            <p class="price">${product[i].price} kr.</p>
+        <p class="name">${product[i].name}</p>
+        <p class="price">${product[i].price} kr.</p>
         </div>
         <p>${product[i].description}</p>
-    </a>
-    `
+        </a>
+        `
+    }
 }
 
 let productsContainer = document.getElementById("products");
@@ -110,16 +111,19 @@ let photo = [
 // get element photos and create a div with each photo
 let photos = document.getElementById("photos");
 
-// use for loop to loop through the array and document.write each product
-for (let i = 0; i < photo.length; i++) {
-    photos.innerHTML += `
-    <a href=${photo[i].link} class="photo">
+if (photos !== null) {
+    
+    // use for loop to loop through the array and document.write each product
+    for (let i = 0; i < photo.length; i++) {
+        photos.innerHTML += `
+        <a href=${photo[i].link} class="photo">
         <img src="${photo[i].image}">
         <div class="info">
-            <p class="photo-name">${photo[i].name}</p>
+        <p class="photo-name">${photo[i].name}</p>
         </div>
-    </a>
-    `
+        </a>
+        `
+    }
 }
 
 let photosContainer = document.getElementById("photos");
@@ -131,4 +135,53 @@ function goRightPhotos() {
 
 function goLeftPhotos() {
     photosContainer.scrollLeft -= scrollAmountPhoto;
+}
+
+
+//BIG SHOE (SHOE PAGE)
+
+// Get all the elements with the class 'all-shoes-box'
+let shoeBoxes = document.getElementsByClassName('all-shoes-box');
+
+// Get the element where the big image will be displayed
+let bigShoe = document.getElementById('big-shoe');
+
+// Loop through each shoe box
+for (let i = 0; i < shoeBoxes.length; i++) {
+  shoeBoxes[i].addEventListener('mouseover', function() {
+    switch(i) {
+      case 0:
+        bigShoe.src = 'img/2sko1.png';
+        break;
+      case 1:
+        bigShoe.src = 'img/2sko2.png';
+        break;
+      case 2:
+        bigShoe.src = 'img/2sko3.png';
+        break;
+      case 3:
+        bigShoe.src = 'img/2sko4.png';
+        break;
+      case 4:
+        bigShoe.src = 'img/2sko5.png';
+        break;
+      default:
+        bigShoe.src = 'img/2sko1.png';
+    }
+  });
+}
+
+// 15 shoesizes with 0.5 intervals
+//let shoeSizes = [36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40 ,40.5, 41, 41.5, 42, 42.5, 43];
+let shoeSizes = [36, 36.5, 38, 38.5, 39.5,40.5, 42, 43];
+
+
+let sizes = document.getElementById("shoe-sizes");
+
+if (sizes !== null) {
+    for (let i = 0; i < shoeSizes.length; i++) {
+        sizes.innerHTML += `
+        <span class="shoe-size">${shoeSizes[i]}</span>
+        `
+    }
 }
