@@ -7,7 +7,7 @@ let product = [
         "inStock": true
     }, 
     {
-        "name": "Nike Zoom Mercurial Superfly 9 Academy KM",
+        "name": "Nike Zoom Mercurial Superfly 9 Academy KM MG",
         "price": "1.099",
         "description": "Fodboldstøvler til flere typer underlag",
         "image": "img/sko2.png",
@@ -54,8 +54,10 @@ for (let i = 0; i < product.length; i++) {
     products.innerHTML += `
     <div class="product">
         <img src="${product[i].image}">
-        <p class="name">${product[i].name}</p>
-        <p class="price">${product[i].price} kr.</p>
+        <div class="info">
+            <p class="name">${product[i].name}</p>
+            <p class="price">${product[i].price} kr.</p>
+        </div>
         <p>${product[i].description}</p>
     </div>
     `

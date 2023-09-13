@@ -4,13 +4,19 @@ body {
 
 .price {
     font-weight: bold;
+    flex: 1;
     text-align: right;
 }
 
 .name {
     font-weight: bold;
+    flex: 1;
     text-align: left;
-    position: absolute;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
 }
 
 .product {
@@ -27,6 +33,7 @@ body {
 
 #products {
     display: flex;
+    overflow-y: auto;
 }
 
 /*HEADER START*/
@@ -48,6 +55,7 @@ a {
     background-color: #f1f1f1;
 	padding: 10px 40px 10px 40px;
     margin-top: 0px;
+    margin-bottom: 0px;
 	list-style: none;
     text-decoration: none;
 }
@@ -69,27 +77,89 @@ a {
 #nike {
     height: 70px;
     width: auto;
-    position: absolute;
-    left: 40px;
+    left: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nike {
+    width: auto;
+    height: 70px;
+    margin-left: 40px;
+    
+}
+
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left align for left section */
+}
+
+.right-section {
+    justify-content: flex-end; /* Right align for right section */
+    margin-right: 40px;
+}
+
+.navigation {
+    flex: 2; /* Takes up more space to remain centered */
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0px;
+}
+
+.nav a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
 }
 
 #searchbar-area {
+    display: flex;
     background-color: #f1f1f1;
-    padding: 5px 0px 10px 15px;
+    padding: 8px 0px 8px 15px;
     border-radius: 30px;
-    align-self: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 #searchbar {
-    background-color: #f1f1f1;
     border: none;
-    border-radius: 30px;
-    align-self: center;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    padding: 0px 0px 0px 10px;
+    width: 130px;
 }
 
 #icons {
-    align-self: center;
+    align-items: center;
+    margin-right: 8px;
 }
+
+#heart {
+    margin-right: 15px;
+}
+
+/*NAVIGATION END*/
+
 
 .dropdown {
     display: flex;
@@ -133,7 +203,7 @@ a {
     color:#949494;
 }
 
-.dropdown:hover .dropdown2-1 {display: block;}
+/*.dropdown:hover .dropdown2-1 {display: block;}*/
 
 
 .dropdown-content {
@@ -145,7 +215,6 @@ a {
 }
 
 
-/*NAVIGATION END*/
 
 /*DROPDOWN START*/
 /*DROPDOWN END*/
@@ -173,6 +242,10 @@ a {
 
 #shop-button h3 {
     margin: 0px;
+}
+
+#shop-button:hover {
+    background-color: #949494;
 }
 
 h1, h2, h3, p, span{
