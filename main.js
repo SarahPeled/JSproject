@@ -116,7 +116,7 @@ for (let i = 0; i < photo.length; i++) {
     <a href=${photo[i].link} class="photo">
         <img src="${photo[i].image}">
         <div class="info">
-            <p class="name">${photo[i].name}</p>
+            <p class="photo-name">${photo[i].name}</p>
         </div>
     </a>
     `
@@ -125,10 +125,10 @@ for (let i = 0; i < photo.length; i++) {
 let photosContainer = document.getElementById("photos");
 let scrollAmountPhoto = 315; // 315 står for 315 pixels, som svarer til bredden på 1 photo + mellemrummet
 
-function goRight() {
+function goRightPhotos() {
     photosContainer.scrollLeft += scrollAmountPhoto;
 }
 
-function goLeft() {
+function goLeftPhotos() {
     photosContainer.scrollLeft -= scrollAmountPhoto;
 }
