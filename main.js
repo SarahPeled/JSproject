@@ -126,9 +126,9 @@ let photosContainer = document.getElementById("photos");
 let scrollAmountPhoto = 315; // 315 står for 315 pixels, som svarer til bredden på 1 photo + mellemrummet
 
 function goRight() {
-    photoContainer.scrollLeft += scrollAmountPhoto;
+    photosContainer.scrollLeft += scrollAmountPhoto;
 }
 
 function goLeft() {
-    photoContainer.scrollLeft -= scrollAmountPhoto;
+    photosContainer.scrollLeft -= scrollAmountPhoto;
 }
