@@ -4,6 +4,7 @@ let product = [
         "price": "779,95",
         "description": "Sko til større børn",
         "image": "img/sko1.png",
+        "link": "#",
         "inStock": true
     }, 
     {
@@ -11,6 +12,7 @@ let product = [
         "price": "1.099",
         "description": "Fodboldstøvler til flere typer underlag",
         "image": "img/sko2.png",
+        "link": "#",
         "inStock": true
     },
     {
@@ -18,6 +20,7 @@ let product = [
         "price": "1.099",
         "description": "Sko til mænd",
         "image": "img/sko3.png",
+        "link": "#",
         "inStock": true
     },
     {
@@ -25,6 +28,7 @@ let product = [
         "price": "1.099",
         "description": "Sko til mænd",
         "image": "img/sko4.png",
+        "link": "#",
         "inStock": true
     },
     {
@@ -32,6 +36,7 @@ let product = [
         "price": "979,95",
         "description": "Sko til mænd",
         "image": "img/sko5.png",
+        "link": "#",
         "inStock": true
     },
     {
@@ -39,6 +44,7 @@ let product = [
         "price": "899,95",
         "description": "Sko til større børn",
         "image": "img/sko6.png",
+        "link": "#",
         "inStock": true
     }
 ]
@@ -52,14 +58,14 @@ let products = document.getElementById("products");
 // use for loop to loop through the array and document.write each product
 for (let i = 0; i < product.length; i++) {
     products.innerHTML += `
-    <div class="product">
+    <a href=${product[i].link} class="product">
         <img src="${product[i].image}">
         <div class="info">
             <p class="name">${product[i].name}</p>
             <p class="price">${product[i].price} kr.</p>
         </div>
         <p>${product[i].description}</p>
-    </div>
+    </a>
     `
 }
 
