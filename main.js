@@ -70,13 +70,65 @@ for (let i = 0; i < product.length; i++) {
 }
 
 let productsContainer = document.getElementById("products");
-let scrollAmount = 455; // 455 står for 455 pixels, som svarer til bredden på 1 product + mellemrummet
+let scrollAmountProduct = 455; // 455 står for 455 pixels, som svarer til bredden på 1 product + mellemrummet
 
 function goRight() {
-    productsContainer.scrollLeft += scrollAmount;
+    productsContainer.scrollLeft += scrollAmountProduct;
 }
 
 function goLeft() {
-    productsContainer.scrollLeft -= scrollAmount;
+    productsContainer.scrollLeft -= scrollAmountProduct;
 }
 
+let photo = [
+    {
+        "name": "Tech Fleece-overdele",
+        "image": "img/nr1.png",
+    },
+    {
+        "name": "Tech Fleece-bukser",
+        "image": "img/nr2.png",
+    },
+    {
+        "name": "Matchende sæt",
+        "image": "img/nr3.png",
+    },
+    {
+        "name": "Fodboldkultur",
+        "image": "img/nr4.png",
+    },
+    {
+        "name": "Fleece",
+        "image": "img/nr5.png",
+    },
+    {
+        "name": "Airmax",
+        "image": "img/nr6.png",
+    },
+]
+
+// get element photos and create a div with each photo
+let photos = document.getElementById("photos");
+
+// use for loop to loop through the array and document.write each product
+for (let i = 0; i < photo.length; i++) {
+    photos.innerHTML += `
+    <a href=${photo[i].link} class="photo">
+        <img src="${photo[i].image}">
+        <div class="info">
+            <p class="name">${photo[i].name}</p>
+        </div>
+    </a>
+    `
+}
+
+let photosContainer = document.getElementById("photos");
+let scrollAmountPhoto = 315; // 315 står for 315 pixels, som svarer til bredden på 1 photo + mellemrummet
+
+function goRight() {
+    photoContainer.scrollLeft += scrollAmountPhoto;
+}
+
+function goLeft() {
+    photoContainer.scrollLeft -= scrollAmountPhoto;
+}
