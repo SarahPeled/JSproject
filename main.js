@@ -4,7 +4,7 @@ let product = [
         "price": "779,95",
         "description": "Sko til større børn",
         "image": "img/sko1.png",
-        "link": "#",
+        "link": "shoe.html",
         "inStock": true
     }, 
     {
