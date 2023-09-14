@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nike Dunk Low - Sarah's Version</title>
+        <script src="main.js" defer></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <ul class="header">
+                <li><img src="img/jordan.png" alt="Jordan logo" id="jordan"></li>
+                <li><a href="">Find en butik</a></li>
+                <li>|</li>
+                <li><a href="">Hjælp</a></li>
+                <li>|</li>
+                <li><a href="">Join Us</a></li>
+                <li>|</li>
+                <li><a href="">Log ind</a></li>
+            </ul>
+        </header>
+
+            <div class="container">
+                <div class="left-section">
+                    <img src="img/nike.png" alt="Nike Logo" id="nike">
+                </div>
+                <nav class="navigation">
+                    <ul class="nav">
+                        <li><a href="">Nyheder og udvalgte</a></li>
+                        <li><a href="">Mænd</a></li>
+                        <li><a href="">Kvinder</a></li>
+                        <li><a href="">Børn</a></li>
+                        <li><a href="">Udsalg</a></li>
+                    </ul>
+                </nav>
+                <div class="right-section">
+                    <div id="searchbar-area">
+                        <img src="img/search.svg" alt="Search Icon">
+                        <input type="text" id="searchbar" placeholder="Søg">
+                    </div>
+                    <div id="icons">
+                        <img src="img/heart.svg" alt="Heart Icon" id="heart">
+                        <img src="img/bag.svg" alt="Bag Icon" id="bag">
+                    </div>
+                </div>
+            </div>
+
+        <section class="studierabat2">
+            <span id="shoe-studierabat">STUDIERABAT</span>
+            <span>10% rabat til studerende.</span>
+            <a href="" id="opdag">Opdag</a>
+        </section>
+
+        <main>
+            <div id="shoe-details-page">
+                <div id="all-shoes">
+                    <div class="all-shoes-box">
+                        <img src="img/2sko1.png" alt="Shoe sideview">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="all-shoes-box">
+                        <img src="img/2sko2.png" alt="Shoe bottom">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="all-shoes-box">
+                        <img src="img/2sko3.png" alt="Shoes topview">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="all-shoes-box">
+                        <img src="img/2sko4.png" alt="Shoes back">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="all-shoes-box">
+                        <img src="img/2sko5.png" alt="Shoe zoom on front">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+    
+                <div id="big-shoe-container">
+                    <img id="big-shoe" src="img/2sko1.png" alt="Shoe sideview">
+                </div>
+
+                <div id="shoe-info">
+                    <h2 class="product-name">Nike Dunk Low</h2>
+                    <span class="product-description">Sko til større børn</span>
+
+                    <p class="product-price">779,95 kr.</p>
+
+                    <div class="size-guide">
+                        <span>Vælg størrelse</span>
+                        <span class="guide">Størrelsesguide</span>
+                    </div>
+
+                    <div id="shoe-sizes"></div>
+
+                    <div class="availability">
+                        <img src="img/klarna.svg" alt="Klarna Logo">
+                        <span>tilgængelig ved kassen.</span>
+                    </div>
+
+                    <a href="" class="btn add">Tilføj til kurv</a>
+                    <a href="" class="btn fav" onclick="alert('Du er ikke logget ind')">Favorit ♡</a>
+
+                    <p id="bottom-detail">Websitekampagner og rabatter gælder ikke <br> for dette produkt.</p>
+                </div>
+            </div>
+
+            <img id="thumb" src="img/2thumb.png" alt="Thumb pressing on the front of shoe">
+            <p id="thumb-title">Hurtige tips til en bedre pasform</p>
+            <p id="thumb-text">Lav en tommelfingertest. Pres din tommelfinger sidelæns ned på <br>
+                skoens tåspids - der bør være 1 cm mellem spidsen og storetåen. <br>
+                Tjek hælene. Hvis fødderne glider ud, er skoene for store. Husk at <br>
+                teste om aftenen. Fødderne har en tendens til at hæve i løbet af <br>
+                dagen.
+            </p>
+
+            <section id="shoe-section">
+                <div id="button-nav">
+                    <h2>Du vil måske også kunne lide</h2>
+                    <div id="button-controls">
+                        <div class="arrow" onclick="goLeft()">&lt</div>
+                        <div class="arrow" onclick="goRight()">&gt</div>
+                    </div>
+                </div>
+                <div id="products"></div>
+            </section>
+
+        </main>
+    </body>
+</html>
