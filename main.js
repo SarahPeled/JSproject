@@ -1,3 +1,4 @@
+// Creates array of objects. Each object is a product with properties: name, price, description, image and (empty) link
 let product = [
     {
         "name": "Nike Dunk Low",
@@ -43,13 +44,12 @@ let product = [
     }
 ]
 
-
-// get element products and create a div with each product
+// Gets element by id="products" and creates variable called "products"
 let products = document.getElementById("products");
 
 if (products !== null && product !== undefined) {
     
-    // use for loop to loop through the array and document.write each product
+    // For loop loops through the array and creates each object with all properties inside the html document
     for (let i = 0; i < product.length; i++) {
         products.innerHTML += `
         <a href=${product[i].link} class="product">
@@ -63,12 +63,17 @@ if (products !== null && product !== undefined) {
         `
     }
 } else {
-    console.log("Is not working because products==null")
+    console.log("Is not working because products==null eller er undefined")
 }
 
+// Gets element by id="products" and creates variable called "productsContainer"
 let productsContainer = document.getElementById("products");
-let scrollAmountProduct = 455; // 455 står for 455 pixels, som svarer til bredden på 1 product + mellemrummet
+ // Sets scrollAmountProduct to 455, which stands for 455 pixels,
+ // which is the width of one product + space between next product
+let scrollAmountProduct = 455;
 
+// Creates functions using the built in scrollLeft function,
+// which sets the number of pixels that an element's content is scrolled from its left edge
 function goRight() {
     productsContainer.scrollLeft += scrollAmountProduct;
 }
@@ -77,6 +82,8 @@ function goLeft() {
     productsContainer.scrollLeft -= scrollAmountProduct;
 }
 
+
+// Creates array of objects. Each object is a photo with properties: name and image
 let photo = [
     {
         "name": "Tech Fleece-overdele",
@@ -104,12 +111,11 @@ let photo = [
     },
 ]
 
-// get element photos and create a div with each photo
+// Gets element by id="photos" and creates variable called "photos"
 let photos = document.getElementById("photos");
 
 if (photos !== null) {
-    
-    // use for loop to loop through the array and document.write each product
+    // For loop loops through the array and creates each object with all properties inside the html document
     for (let i = 0; i < photo.length; i++) {
         photos.innerHTML += `
         <a href=${photo[i].link} class="photo">
@@ -120,11 +126,18 @@ if (photos !== null) {
         </a>
         `
     }
+} else {
+    console.log("Is not working because photos==null")
 }
 
+// Gets element by id="photos" and creates variable called "photosContainer"
 let photosContainer = document.getElementById("photos");
-let scrollAmountPhoto = 315; // 315 står for 315 pixels, som svarer til bredden på 1 photo + mellemrummet
+// Sets scrollAmountPhoto to 315, which stands for 315 pixels,
+// which is the width of one photo + space between next photo
+let scrollAmountPhoto = 315;
 
+// Creates functions using the built in scrollLeft function,
+// which sets the number of pixels that an element's content is scrolled from its left edge
 function goRightPhotos() {
     photosContainer.scrollLeft += scrollAmountPhoto;
 }
@@ -134,15 +147,16 @@ function goLeftPhotos() {
 }
 
 
-//BIG SHOE (SHOE PAGE)
+//(SHOE PAGE)
 
-// Get all the elements with the class 'all-shoes-box'
+// Gets all element by class="all-shoes-box" and creates variable called "shoeBoxes"
 let shoeBoxes = document.getElementsByClassName('all-shoes-box');
 
-// Get the element where the big image will be displayed
+// Gets element by id="big-shoe" and creates variable called "bigShoe"
 let bigShoe = document.getElementById('big-shoe');
 
-// Loop through each shoe box
+// Inside for loop an event listener for 'mouseover' event i added to each element in ShoeBoxes
+// When you hover over an element, the function inside addEventListener gets executed, so the correct image is displayed
 for (let i = 0; i < shoeBoxes.length; i++) {
   shoeBoxes[i].addEventListener('mouseover', function() {
     switch(i) {
@@ -167,6 +181,7 @@ for (let i = 0; i < shoeBoxes.length; i++) {
   });
 }
 
+// Creates array of objects. Each object is a shoeSize with properties: size and instock
 let shoeSizes = [
     {
         "size": 35.5,
@@ -202,13 +217,21 @@ let shoeSizes = [
     },
 ];
 
+// Gets element by id="shoe-sizes" and creates variable called "sizes"
 let sizes = document.getElementById("shoe-sizes");
 
+// For loop loops through the array and creates each object with the size-property inside the html document
 if (sizes !== null) {
     for (let i = 0; i < shoeSizes.length; i++) {
+        // Ternary operator.
+        // If specific size is instock, the element will be given a class="shoe-size"
+        // If specific size is not instock, the element will be given a class="shoe-size" and class="shoe-size-gone"
         let className = shoeSizes[i].instock ? "shoe-size" : "shoe-size shoe-size-gone";
         sizes.innerHTML += `
         <span class="${className}">EU ${shoeSizes[i].size}</span>
         `
     }
+}
+else {
+    console.log("Is not working because shoe-size==null")
 }
