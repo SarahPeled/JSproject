@@ -449,6 +449,20 @@ h1 {
     cursor: pointer;
 }
 
+.shoe-size:hover {
+    border: 1px solid black;
+}
+
+.shoe-size-gone {
+    color: #d1d1d1;
+    background-color: #ececec;
+    cursor: default;
+}
+
+.shoe-size-gone:hover {
+    border: 1px solid #dcdcdc;
+}
+
 .availability  {
     margin-top: 25px;
     text-align: center;
@@ -459,18 +473,19 @@ h1 {
 }
 
 .btn {
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 30px;
     display: block;
     text-align: center;
     margin-top: 12px;
+    margin-right: 16px;
 }
 
 .add {
     background-color: black;
     color: white;
     border: 1.5px solid black;
-    padding: 22px 110px;
+    padding: 21px;
 }
 
 .add:hover {
@@ -481,7 +496,7 @@ h1 {
 
 .fav {
     border: 1.5px solid #dcdcdc;
-    padding: 18px 110px;
+    padding: 17px;
 }
 
 .fav:hover {

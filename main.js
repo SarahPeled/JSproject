@@ -47,7 +47,7 @@ let product = [
 // get element products and create a div with each product
 let products = document.getElementById("products");
 
-if (products !== null) {
+if (products !== null && product !== undefined) {
     
     // use for loop to loop through the array and document.write each product
     for (let i = 0; i < product.length; i++) {
@@ -62,6 +62,8 @@ if (products !== null) {
         </a>
         `
     }
+} else {
+    console.log("Is not working because products==null")
 }
 
 let productsContainer = document.getElementById("products");
@@ -204,7 +206,7 @@ let sizes = document.getElementById("shoe-sizes");
 
 if (sizes !== null) {
     for (let i = 0; i < shoeSizes.length; i++) {
-        let className = shoeSizes[i].instock ? "shoe-size" : "shoe-size-gone";
+        let className = shoeSizes[i].instock ? "shoe-size" : "shoe-size shoe-size-gone";
         sizes.innerHTML += `
         <span class="${className}">EU ${shoeSizes[i].size}</span>
         `
