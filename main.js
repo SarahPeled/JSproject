@@ -5,7 +5,6 @@ let product = [
         "description": "Sko til større børn",
         "image": "img/sko1.png",
         "link": "shoe.html",
-        "inStock": true
     }, 
     {
         "name": "Nike Zoom Mercurial Superfly 9 Academy KM MG",
@@ -13,7 +12,6 @@ let product = [
         "description": "Fodboldstøvler til flere typer underlag",
         "image": "img/sko2.png",
         "link": "#",
-        "inStock": true
     },
     {
         "name": "Nike Dunk Low",
@@ -21,7 +19,6 @@ let product = [
         "description": "Sko til mænd",
         "image": "img/sko3.png",
         "link": "#",
-        "inStock": true
     },
     {
         "name": "Nike Dunk Low Retro",
@@ -29,7 +26,6 @@ let product = [
         "description": "Sko til mænd",
         "image": "img/sko4.png",
         "link": "#",
-        "inStock": true
     },
     {
         "name": "Nike Air Force 1 '07",
@@ -37,7 +33,6 @@ let product = [
         "description": "Sko til mænd",
         "image": "img/sko5.png",
         "link": "#",
-        "inStock": true
     },
     {
         "name": "Air Jordan 1 Mid",
@@ -45,7 +40,6 @@ let product = [
         "description": "Sko til større børn",
         "image": "img/sko6.png",
         "link": "#",
-        "inStock": true
     }
 ]
 
@@ -171,17 +165,48 @@ for (let i = 0; i < shoeBoxes.length; i++) {
   });
 }
 
-// 15 shoesizes with 0.5 intervals
-//let shoeSizes = [36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40 ,40.5, 41, 41.5, 42, 42.5, 43];
-let shoeSizes = [35.5, 36, 36.5, 37.5, 38, 38.5, 39, 40];
-
+let shoeSizes = [
+    {
+        "size": 35.5,
+        "instock": true
+    },
+    {
+        "size": 36,
+        "instock": false
+    },
+    {
+        "size": 36.5,
+        "instock": false
+    },
+    {
+        "size": 37,
+        "instock": true
+    },
+    {
+        "size": 37.5,
+        "instock": true
+    },
+    {
+        "size": 38,
+        "instock": true
+    },
+    {
+        "size": 39,
+        "instock": false
+    },
+    {
+        "size": 40,
+        "instock": true
+    },
+];
 
 let sizes = document.getElementById("shoe-sizes");
 
 if (sizes !== null) {
     for (let i = 0; i < shoeSizes.length; i++) {
+        let className = shoeSizes[i].instock ? "shoe-size" : "shoe-size-gone";
         sizes.innerHTML += `
-        <span class="shoe-size">EU ${shoeSizes[i]}</span>
+        <span class="${className}">EU ${shoeSizes[i].size}</span>
         `
     }
 }
