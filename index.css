@@ -431,13 +431,13 @@ h1 {
     margin-bottom: 8px;
 }
 
-.size-guide .guide{
+.guide{
     color: #949494;
 }
 
 .shoe-size {
     padding: 10px 20px;
-    border: 1px solid #c4c4c4;
+    border: 1px solid #dcdcdc;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -450,7 +450,7 @@ h1 {
 }
 
 .availability  {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
 }
 
@@ -464,18 +464,28 @@ h1 {
     display: block;
     text-align: center;
     margin-top: 12px;
-    cursor: pointer;
 }
 
 .add {
     background-color: black;
     color: white;
+    border: 1.5px solid black;
     padding: 22px 110px;
 }
 
+.add:hover {
+    background-color: #949494;
+    border: 1.5px solid #949494;
+}
+
+
 .fav {
-    border: 1px solid rgb(182, 182, 182);
+    border: 1.5px solid #dcdcdc;
     padding: 18px 110px;
+}
+
+.fav:hover {
+    border: 1.5px solid black;
 }
 
 #bottom-detail {

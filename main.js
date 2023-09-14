@@ -173,7 +173,7 @@ for (let i = 0; i < shoeBoxes.length; i++) {
 
 // 15 shoesizes with 0.5 intervals
 //let shoeSizes = [36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40 ,40.5, 41, 41.5, 42, 42.5, 43];
-let shoeSizes = [36, 36.5, 38, 38.5, 39.5,40.5, 42, 43];
+let shoeSizes = [35.5, 36, 36.5, 37.5, 38, 38.5, 39, 40];
 
 
 let sizes = document.getElementById("shoe-sizes");
@@ -181,7 +181,7 @@ let sizes = document.getElementById("shoe-sizes");
 if (sizes !== null) {
     for (let i = 0; i < shoeSizes.length; i++) {
         sizes.innerHTML += `
-        <span class="shoe-size">${shoeSizes[i]}</span>
+        <span class="shoe-size">EU ${shoeSizes[i]}</span>
         `
     }
 }

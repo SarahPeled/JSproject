@@ -94,12 +94,12 @@
                     <div id="shoe-sizes"></div>
 
                     <div class="availability">
-                        <img src="img/klarna.svg" alt="Klarna">
+                        <img src="img/klarna.svg" alt="Klarna Logo">
                         <span>tilgængelig ved kassen.</span>
                     </div>
 
-                    <a class="btn add">Tilføj til kurv</a>
-                    <a class="btn fav">Favorit ♡</a>
+                    <a href="" class="btn add">Tilføj til kurv</a>
+                    <a href="" class="btn fav" onclick="alert('Du er ikke logget ind')">Favorit ♡</a>
 
                     <p id="bottom-detail">Websitekampagner og rabatter gælder ikke <br> for dette produkt.</p>
                 </div>
@@ -111,7 +111,19 @@
                 skoens tåspids - der bør være 1 cm mellem spidsen og storetåen. <br>
                 Tjek hælene. Hvis fødderne glider ud, er skoene for store. Husk at <br>
                 teste om aftenen. Fødderne har en tendens til at hæve i løbet af <br>
-                dagen.</p>
+                dagen.
+            </p>
+
+            <section id="shoe-section">
+                <div id="button-nav">
+                    <h2>Du vil måske også kunne lide</h2>
+                    <div id="button-controls">
+                        <div class="arrow" onclick="goLeft()">&lt</div>
+                        <div class="arrow" onclick="goRight()">&gt</div>
+                    </div>
+                </div>
+                <div id="products"></div>
+            </section>
 
         </main>
     </body>
